@@ -50,7 +50,7 @@ h6 {
 .back-to-top {
   position: fixed;
   display: none;
-  background: #007bff;
+  background: #000000;
   color: #fff;
   width: 44px;
   height: 44px;
@@ -62,6 +62,7 @@ h6 {
   bottom: 15px;
   transition: background 0.5s;
   z-index: 11;
+  border: 2px solid	#0B9CB9;
 }
 
 .back-to-top i {
@@ -520,7 +521,7 @@ h6 {
 
 #about .about-container .icon-box .icon {
   float: left;
-  background: #fff;
+  background: #5DBCD2;
   width: 64px;
   height: 64px;
   display: -webkit-box;
@@ -542,17 +543,21 @@ h6 {
   flex-direction: column;
   text-align: center;
   border-radius: 50%;
-  border: 2px solid #007bff;
+  border: 2px solid	rgb(39, 40, 41);
   transition: all 0.3s ease-in-out;
 }
 
+.ion-padding-left{
+  padding-left: 15px;
+}
+
 #about .about-container .icon-box .icon i {
-  color: #007bff;
+  color: #ffffff;
   font-size: 24px;
 }
 
 #about .about-container .icon-box:hover .icon {
-  background: #007bff;
+  background: 	rgb(57, 58, 59);
 }
 
 #about .about-container .icon-box:hover .icon i {
@@ -969,7 +974,7 @@ h6 {
 }
 
 #team .member:hover .member-info {
-  background: rgba(0, 62, 128, 0.7);
+  background: rgb(1, 140, 168, 0.7);
   opacity: 1;
   transition: 0.4s;
 }
@@ -1171,8 +1176,8 @@ h6 {
 }
 
 #contact .form button[type="submit"] {
-  background: #007bff;
-  border: 0;
+  background: rgb(51, 48, 48);
+  border: 2px solid black;
   border-radius: 20px;
   padding: 8px 30px;
   color: #fff;
@@ -1180,7 +1185,7 @@ h6 {
 }
 
 #contact .form button[type="submit"]:hover {
-  background: #0067d5;
+  background: rgb(0, 133, 163);
   cursor: pointer;
 }
 
@@ -1189,14 +1194,14 @@ h6 {
 --------------------------------------------------------------*/
 
 #footer {
-  background: #00428a;
+  background: black;
   padding: 0 0 30px 0;
   color: #eee;
   font-size: 14px;
 }
 
 #footer .footer-top {
-  background: #004a99;
+  background: 	rgb(1, 140, 168);
   padding: 60px 0 30px 0;
 }
 
@@ -1227,7 +1232,7 @@ h6 {
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #007bff;
+  background: #222121;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1237,10 +1242,11 @@ h6 {
   width: 36px;
   height: 36px;
   transition: 0.3s;
+  border: 2px solid white;
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #0067d5;
+  background: #000000;
   color: #fff;
 }
 
@@ -1298,8 +1304,8 @@ h6 {
 }
 
 #footer .footer-top .footer-newsletter input[type="submit"] {
-  background: #007bff;
-  border: 0;
+  background: rgb(0, 0, 0);
+  border: 2px solid rgb(255, 255, 255);
   width: 35%;
   padding: 6px 0;
   text-align: center;
@@ -1309,7 +1315,7 @@ h6 {
 }
 
 #footer .footer-top .footer-newsletter input[type="submit"]:hover {
-  background: #0062cc;
+  background: rgb(57, 58, 59);
 }
 
 #footer .copyright {
@@ -1350,6 +1356,10 @@ h6 {
   #header .logo h1 {
     font-size: 28px;
     padding: 8px 0;
+  }
+
+  #intro-buttons{
+    text-align: center;
   }
 
   #intro {
