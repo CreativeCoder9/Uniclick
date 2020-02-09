@@ -217,6 +217,7 @@ h6 {
   transition: 0.5s;
   margin: 0 20px 20px 0;
   color: #fff;
+  background: #E73F3F;
 }
 
 #intro .intro-info .btn-get-started {
@@ -225,11 +226,11 @@ h6 {
   color: #fff;
 }
 
-#intro .intro-info .btn-get-started:hover {
-  background: none;
+/* #intro .intro-info .btn-get-started:hover {
+  background: #E73F3F;
   border-color: #fff;
   color: #fff;
-}
+} */
 
 #intro .intro-info .btn-services {
   border: 2px solid #fff;
@@ -521,7 +522,7 @@ h6 {
 
 #about .about-container .icon-box .icon {
   float: left;
-  background: #5DBCD2;
+  background: 	rgb(38, 181, 209);
   width: 64px;
   height: 64px;
   display: -webkit-box;
@@ -557,7 +558,7 @@ h6 {
 }
 
 #about .about-container .icon-box:hover .icon {
-  background: 	rgb(57, 58, 59);
+  background: #E73F3F;
 }
 
 #about .about-container .icon-box:hover .icon i {
@@ -650,7 +651,7 @@ h6 {
 
 #why-us {
   padding: 60px 0;
-  background: #004a99;
+  background: #cf4e4e;
 }
 
 #why-us .section-header h3,
@@ -659,8 +660,8 @@ h6 {
 }
 
 #why-us .card {
-  background: #00458f;
-  border-color: #00458f;
+  background: #f7f3f3;
+  /* border: 1px solid #000000; */
   border-radius: 10px;
   margin: 0 15px;
   padding: 15px 0;
@@ -671,37 +672,38 @@ h6 {
 }
 
 #why-us .card:hover {
-  background: #003b7a;
-  border-color: #003b7a;
+  background: #212222;
+  background: #54cbe0;
 }
 
 #why-us .card i {
   font-size: 48px;
   padding-top: 15px;
-  color: #bfddfe;
+  color: rgb(0, 0, 0);
 }
 
 #why-us .card h5 {
   font-size: 22px;
   font-weight: 600;
+  color: rgb(0, 0, 0);
 }
 
 #why-us .card p {
   font-size: 15px;
-  color: #d8eafe;
+  color: #000000;
 }
 
 #why-us .card .readmore {
-  color: #fff;
+  color: rgb(10, 10, 10);
   font-weight: 600;
   display: inline-block;
   transition: 0.3s ease-in-out;
-  border-bottom: #00458f solid 2px;
+  border-bottom: #000000 solid 2px;
 }
 
-#why-us .card .readmore:hover {
-  border-bottom: #fff solid 2px;
-}
+/* #why-us .card .readmore:hover {
+  border-bottom: rgb(12, 12, 12) solid 3px;
+} */
 
 #why-us .counters {
   padding-top: 40px;
@@ -1185,7 +1187,7 @@ h6 {
 }
 
 #contact .form button[type="submit"]:hover {
-  background: rgb(0, 133, 163);
+  background: #E73F3F;
   cursor: pointer;
 }
 
@@ -1246,7 +1248,7 @@ h6 {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #000000;
+  background: #E73F3F;
   color: #fff;
 }
 
@@ -1315,7 +1317,7 @@ h6 {
 }
 
 #footer .footer-top .footer-newsletter input[type="submit"]:hover {
-  background: rgb(57, 58, 59);
+  background: #E73F3F;
 }
 
 #footer .copyright {
