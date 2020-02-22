@@ -92,14 +92,21 @@ jQuery(document).ready(function($) {
     else var str = $(this).serialize();
     var action = $(this).attr('action');
     if( ! action ) {
-      action = 'contactform/contactform.php';
+      action = 'https://uniclicks.000webhostapp.com/Mailer/contactmail.php';
     }
+
+
+
     $.ajax({
       type: "POST",
       url: action,
       data: str,
-      success: function(msg) {
+      datatype: 'json',
+      success: function(response) {
+        $("#sendmessage").addClass("show");
         // alert(msg);
+        var msg =  response[0];
+        console.log(msg);
         if (msg == 'OK') {
           $("#sendmessage").addClass("show");
           $("#errormessage").removeClass("show");

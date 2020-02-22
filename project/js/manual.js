@@ -15,3 +15,9 @@ function mouseOver() {
 function mouseOut () {
     document.getElementById("our-services-btn").style.backgroundColor = "#E73F3F"
 }
+
+// Thank you plug in------------>
+const myform = document.getElementById("myform");
+myform.addEventListener("submit" , (e) => {
+ document.getElementById("sendmessage").classList.add("show");
+})
