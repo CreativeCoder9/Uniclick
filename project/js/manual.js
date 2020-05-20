@@ -1,3 +1,21 @@
+var name, email, subject, message;
+
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDNGGLUfK6OoI6SyFLPqLjp4aLwEPDlw0g",
+    authDomain: "uniclick-d1aa5.firebaseapp.com",
+    databaseURL: "https://uniclick-d1aa5.firebaseio.com",
+    projectId: "uniclick-d1aa5",
+    storageBucket: "uniclick-d1aa5.appspot.com",
+    messagingSenderId: "44062048491",
+    appId: "1:44062048491:web:7e306542791a9fa85d3eae",
+    measurementId: "G-R1ZTCZWCSK"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  
+  var db = firebase.firestore();
+
 document.getElementById("get-started-btn").onmouseover = function() {mouseOver()};
 document.getElementById("get-started-btn").onmouseout = function() {mouseOut()};
 document.getElementById("our-services-btn").onmouseover = function() {
@@ -16,8 +34,67 @@ function mouseOut () {
     document.getElementById("our-services-btn").style.backgroundColor = "#E73F3F"
 }
 
+console.log(document.getElementById("sendmessage").innerHTML);
 // Thank you plug in------------>
 const myform = document.getElementById("myform");
 myform.addEventListener("submit" , (e) => {
- document.getElementById("sendmessage").classList.add("show");
+    e.preventDefault();
+    document.getElementById("sendButton").style.display = "none";
+    document.getElementById("sendingStatus1").style.display = "block";
+    name = formValue("name");
+    email = formValue("email");
+    message = formValue("message");
+    subject = formValue("subject");
+    console.log(name, email, message, subject);
+    submitOnFirebase(name, email, subject, message);
+
 })
+
+
+function formValue(id){
+    var inputValue = document.getElementById(id);
+    return inputValue.value;
+}
+
+function submitOnFirebase( name , email, subject, message){
+    db.collection("contactRequest").add({
+        Name: name,
+        Email: email,
+        Subject: subject,
+        Message: message
+    })
+    .then(function(docRef) {
+        document.getElementById("sendmessage").classList.add("show");
+        document.getElementById("sendButton").style.display = "block";
+        document.getElementById("sendingStatus1").style.display = "none";
+    })
+    .catch(function(error) {
+        document.getElementById("sendmessage").classList.remove("show");
+        console.error("Error adding document: ", error);
+        document.getElementById("sendmessage").innerHTML = error;        
+    });
+}
+
+
+//subscribe form
+const subscribeForm = document.getElementById("subscribe");
+// console.log(subscribeForm);
+subscribe.addEventListener("submit" , (e) => {
+    e.preventDefault();
+    document.getElementById("sendButton").style.display = "none";
+    document.getElementById("sendingStatus1").style.display = "block";
+    subscriber = formValue("subscriber");
+    addSubscriber(subscriber);
+})
+
+function addSubscriber(subscriber){
+    db.collection("Subscriber").add({
+        Email: subscriber,
+    })
+    .then(function(docRef) {
+        document.getElementById("submitButton").value = "Subscribed";
+    })
+    .catch(function(error) {
+        document.getElementById("sendmessage").innerHTML = error;        
+    });
+}

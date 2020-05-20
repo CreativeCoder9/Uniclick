@@ -159,8 +159,9 @@ h6 {
 
 #header .logo img {
   padding: 0;
-  margin: 7px 0;
-  max-height: 26px;
+  /* margin: 7px 0; */
+  max-height: 47px;
+  max-width: 160px;
 }
 
 .main-pages {
@@ -673,7 +674,7 @@ h6 {
 
 #why-us .card:hover {
   background: #212222;
-  background: #54cbe0;
+  background: #74d9eb;
 }
 
 #why-us .card i {
@@ -1154,6 +1155,14 @@ h6 {
   padding: 15px;
   font-weight: 600;
   margin-bottom: 15px;
+}
+
+.showme {
+  display: inline;
+}
+
+.hideme {
+  display: none;
 }
 
 #contact .form #sendmessage.show,

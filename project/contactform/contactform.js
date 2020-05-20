@@ -98,7 +98,7 @@ jQuery(document).ready(function($) {
 
 
     $.ajax({
-      type: "POST",
+      type: "GET",
       url: action,
       data: str,
       datatype: 'json',
