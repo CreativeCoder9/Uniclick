@@ -81,8 +81,6 @@ const subscribeForm = document.getElementById("subscribe");
 // console.log(subscribeForm);
 subscribe.addEventListener("submit" , (e) => {
     e.preventDefault();
-    document.getElementById("sendButton").style.display = "none";
-    document.getElementById("sendingStatus1").style.display = "block";
     subscriber = formValue("subscriber");
     addSubscriber(subscriber);
 })
@@ -92,9 +90,10 @@ function addSubscriber(subscriber){
         Email: subscriber,
     })
     .then(function(docRef) {
-        document.getElementById("submitButton").value = "Subscribed";
+        document.getElementById("subscribe_err").classList.remove ("show");        
+        document.getElementById("submitButton2").value = "Subscribed!!";
     })
     .catch(function(error) {
-        document.getElementById("sendmessage").innerHTML = error;        
+        document.getElementById("subscribe_err").classList.add ("show");        
     });
 }
