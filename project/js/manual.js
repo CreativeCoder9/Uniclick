@@ -39,14 +39,28 @@ console.log(document.getElementById("sendmessage").innerHTML);
 const myform = document.getElementById("myform");
 myform.addEventListener("submit" , (e) => {
     e.preventDefault();
-    document.getElementById("sendButton").style.display = "none";
-    document.getElementById("sendingStatus1").style.display = "block";
     name = formValue("name");
     email = formValue("email");
     message = formValue("message");
     subject = formValue("subject");
-    console.log(name, email, message, subject);
-    submitOnFirebase(name, email, subject, message);
+    var t = grecaptcha.getResponse();
+
+    0 == t.length ? (alert("reCapcha challenge failed! Please try again!"),
+    grecaptcha.reset()) : 
+            document.getElementById("sendButton").style.display = "none";
+            document.getElementById("sendingStatus1").style.display = "block";
+            submitOnFirebase(name, email, subject, message),
+            $.ajax({
+                url: "https://formspree.io/f/xzbkowwk",
+                method: "POST",
+                dataType: "json",
+                data: {
+                name: name,
+                email: email,
+                subject: subject,
+                message: message
+                }
+            });
 
 })
 

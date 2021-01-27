@@ -27,6 +27,16 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144023839-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-144023839-4');
+</script>
+</head>
 <body>
 
   <!--==========================
@@ -109,7 +119,7 @@
 
         <header class="section-header">
           <h3>About Us</h3>
-          <p>We are a group of passionate engineers & designers working hard to bring the bless of technology to everyone.</p>
+          <p>We are a group of passionate engineers & designers working hard to bring the bliss of technology to everyone.</p>
         </header>
 
         <div class="row about-container">
@@ -583,7 +593,7 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp">
             <div class="member">
-              <img src="img/suman-sized.jpeg" class="img-fluid" alt="">
+              <img src="img/suman.jpeg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Suman Ghosh</h4>
@@ -617,7 +627,7 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
             <div class="member">
-              <img src="img/souptik-sized.jpeg" class="img-fluid" alt="">
+              <img src="img/souptik.jpeg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Souptik Biswas</h4>
@@ -663,32 +673,32 @@
 
         <div class="section-header">
           <h3>Our CLients</h3>
-          <p>Within a year of establishment, we have grown from 0 customers to 10. We have provided services to multiple customers from NASSCOM 10,000 startups, Kolkata</p>
-          <h4 style="text-align: center;">Our Top Client</h4>
+          <p>Within a year of establishment, we have grown from 0 customers to 8. We have provided services to multiple customers from NASSCOM 10,000 startups, Kolkata</p>
+          <h4 style="text-align: center;">Our Top Clients</h4>
           
         </div>
 
         <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
 
-          <div class=" col-md-4 col-xs-6" style="margin: auto;">
+          <div class=" col-md-4 col-xs-6">
             <div class="client-logo">
-              <img onclick="window.open('https://www.guideratna.com','_blank')"  src="img/clients/guideRatna-logo copy.png" class="img-fluid" alt="GuideRatna">
+              <img onclick="window.open('https://creativecoder9.github.io/guideratna-final/','_blank')"  src="img/clients/guideRatna-logo copy.png" class="img-fluid" alt="GuideRatna">
+            </div>
+          </div>
+          
+          <div class="col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img onclick="window.open('https://www.bikshan.com','_blank')" src="img/clients/Bikshan.jpg" class="img-fluid" alt="Bikshan Diagnostic Centre">
+            </div>
+          </div>
+        
+          <div class="col-md-4 col-xs-6">
+            <div class="client-logo">
+              <img onclick="window.open('https://www.qworld.in','_blank')" src="img/clients/Qworld.jpg" class="img-fluid" alt="Qworld">
             </div>
           </div>
           
           <!-- <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo">
-              <img src="img/clients/client-2.png" class="img-fluid" alt="">
-            </div>
-          </div>
-        
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo">
-              <img src="img/clients/client-3.png" class="img-fluid" alt="">
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="client-logo">
               <img src="img/clients/client-4.png" class="img-fluid" alt="">
             </div>
@@ -737,8 +747,8 @@
         <div class="row wow fadeInUp">
 
           <div class="col-lg-6">
-            <div class="map mb-4 mb-lg-0">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.6563426434604!2d88.41630431493785!3d22.88914998502082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f896a31073f335%3A0x9515c598afd2f773!2sNaihati%20Station!5e0!3m2!1sen!2sin!4v1578082430250!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 312px;" allowfullscreen></iframe>
+            <div class="map mb-4 mb-lg-0 img-thumbnail">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.6563426434604!2d88.41630431493785!3d22.88914998502082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f896a31073f335%3A0x9515c598afd2f773!2sNaihati%20Station!5e0!3m2!1sen!2sin!4v1578082430250!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 395.5px;" allowfullscreen></iframe>
             </div>
           </div>
           <div class="col-lg-6">
@@ -779,7 +789,8 @@
                   <textarea class="form-control" name="message" id="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message" required></textarea>
                   <div class="validation"></div>
                 </div>
-                <div class="text-center"><button type="submit" title="Send Message"><span id="sendingStatus1" class="spinner-border spinner-border-sm sendingStatus1" style="display: none;"></span><span id="sendingStatus2" style="display: none;"> Sending...</span><span id="sendButton">Send Message</span></button></div>
+                <div style="margin-bottom: 10px;" class="text-center g-recaptcha" data-sitekey="6LcaKj4aAAAAAN-HbSENI48J8AT_VprkUivhbrfN"></div>
+                <div ><button type="submit" title="Send Message"><span id="sendingStatus1" class="spinner-border spinner-border-sm sendingStatus1 "  style="display: none;"></span><span id="sendingStatus2" style="display: none;"> Sending...</span><span id="sendButton">Send Message</span></button></div>
               </form>
             </div>
           </div>
@@ -875,8 +886,8 @@
   <script src="lib/waypoints/waypoints.min.js"></script>
   <script src="lib/counterup/counterup.min.js"></script>
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/isotope/isotope.pkgd.min.js"></script>
-  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <!-- <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script> -->
   <!-- Contact Form JavaScript File -->
   <!-- <script src="contactform/contactform.js"></script> -->
   <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -890,11 +901,12 @@
   <!-- Template Main Javascript File -->
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
-  <script src="/__/firebase/7.14.3/firebase-analytics.js"></script>
+  <!-- <script src="/__/firebase/7.14.3/firebase-analytics.js"></script> -->
 
   
   <script src="js/main.js"></script>
   <script src="js/manual.js" ></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </body>
 </html>
